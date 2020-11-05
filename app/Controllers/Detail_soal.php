@@ -9,6 +9,10 @@ class Detail_soal extends BaseController
     {
         $this->db = \Config\Database::connect();
         $this->builder = $this->db->table('detail_soal');
+        if (count($this->ceklogin()) == 0) {
+			header('Location: '.site_url('login'));
+			exit();
+		}
     }
 
     function json()

@@ -29,6 +29,24 @@
     <link rel="stylesheet" href="<?= base_url(''); ?>/template/back/plugins/datatables-responsive/css/responsive.bootstrap4.min.csss">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <style>
+    
+        .page-title{
+            background: #ffffff;
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 3px #aaaaaa;
+        }
+    
+        .display-block{
+            display: block;
+            padding: 5px 0;
+            font-size: 16px;
+        }
+
+    </style>
+
 </head>
 
  <!-- jQuery -->
@@ -201,7 +219,7 @@
             <!-- Brand Logo -->
             <a href="index3.html" class="brand-link">
                 <img src="<?= base_url(''); ?>/template/back/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-                <span class="brand-text font-weight-light">AdminLTE 3</span>
+                <span class="brand-text font-weight-light">Fispedia</span>
             </a>
 
             <!-- Sidebar -->
@@ -228,7 +246,7 @@
                 </li>
                <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <i class="nav-icon fas fa-tags"></i>
                                 <p>
                                     Master
                                     <i class="right fas fa-angle-left"></i>
@@ -264,61 +282,61 @@
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="<?= site_url('type_kelompok'); ?>" class="nav-link">
-                                    <i class="fa fa-home"></i>
+                                    <i class="fa fa-tag"></i>
                                     <p>Tipe Kelompok</p>
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="<?= site_url('mata_pelajaran'); ?>" class="nav-link">
-                                    <i class="fa fa-home"></i>
+                                    <i class="fa fa-file"></i>
                                     <p>Mata Pelajaran</p>
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="<?= site_url('banksoal'); ?>" class="nav-link">
-                                    <i class="fa fa-home"></i>
+                                    <i class="fa fa-file-alt"></i>
                                     <p>Bank Soal</p>
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="<?= site_url('rekening'); ?>" class="nav-link">
-                                    <i class="fa fa-home"></i>
+                                    <i class="fa fa-credit-card"></i>
                                     <p>Rekening</p>
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="<?= site_url('kupon'); ?>" class="nav-link">
-                                    <i class="fa fa-home"></i>
+                                    <i class="fa fa-clipboard"></i>
                                     <p>Kupon</p>
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="<?= site_url('user_detail'); ?>" class="nav-link">
-                                    <i class="fa fa-home"></i>
+                                    <i class="fa fa-user"></i>
                                     <p>User Detail</p>
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="<?= site_url('soal'); ?>" class="nav-link">
-                                    <i class="fa fa-home"></i>
+                                    <i class="fa fa-tasks"></i>
                                     <p>Soal</p>
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="<?= site_url('detail_soal'); ?>" class="nav-link">
-                                    <i class="fa fa-home"></i>
+                                    <i class="fa fa-file-word"></i>
                                     <p>Detail Soal</p>
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="<?= site_url('nilai'); ?>" class="nav-link">
-                                    <i class="fa fa-home"></i>
+                                    <i class="fa fa-coins"></i>
                                     <p>Nilai</p>
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="<?= site_url('kodeunik'); ?>" class="nav-link">
-                                <i class="fa fa-home"></i>
+                                <i class="fa fa-keyboard"></i>
                                 <p>Kodeunik</p>
                             </a>
                         </li>

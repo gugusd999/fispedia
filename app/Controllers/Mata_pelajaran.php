@@ -9,6 +9,10 @@ class Mata_pelajaran extends BaseController
     {
         $this->db = \Config\Database::connect();
         $this->builder = $this->db->table('mata_pelajaran');
+        if (count($this->ceklogin()) == 0) {
+			header('Location: '.site_url('login'));
+			exit();
+		}
     }
 
     function json()

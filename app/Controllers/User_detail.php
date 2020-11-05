@@ -9,6 +9,10 @@ class User_detail extends BaseController
     {
         $this->db = \Config\Database::connect();
         $this->builder = $this->db->table('user_detail');
+        if (count($this->ceklogin()) == 0) {
+			header('Location: '.site_url('login'));
+			exit();
+		}
     }
 
     function json()

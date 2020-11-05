@@ -9,6 +9,10 @@ class Status extends BaseController
     {
         $this->db = \Config\Database::connect();
         $this->builder = $this->db->table('status');
+        if (count($this->ceklogin()) == 0) {
+			header('Location: '.site_url('login'));
+			exit();
+		}
     }
 
     function json()
@@ -49,9 +53,8 @@ class Status extends BaseController
         foreach ($dataArr as $key => $value) {
             $child = [];
             $child[] = $value->id; 
-$child[] = $value->status; 
-$child[] = $value->type_status; 
-
+            $child[] = $value->status; 
+            $child[] = $this->form()::rowbackitem("type_status", $value->type_status, "type_status"); 
             $child[] = "
                 <center>
                     <a href='" . site_url('status/edit/'.$value->id) . "' class='btn btn-sm btn-warning'>Edit</a>

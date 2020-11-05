@@ -143,13 +143,10 @@
 
 <script>
     $(document).ready(function() {
-
         $('body').on('click', '[modal-open-delete]', function() {
             $("#hapusmodal").modal('show');
             $("#kode-hapus").val($(this).attr('data-id'));
-
         })
-
     })
 </script>
 

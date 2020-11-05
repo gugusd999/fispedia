@@ -9,6 +9,10 @@ class M_bank extends BaseController
     {
         $this->db = \Config\Database::connect();
         $this->builder = $this->db->table('m_bank');
+        if (count($this->ceklogin()) == 0) {
+			header('Location: '.site_url('login'));
+			exit();
+		}
     }
 
     function json()

@@ -270,6 +270,7 @@ class Form extends Model
                         /* Fungsi */
                         function formatRupiah(angka, prefix)
                         {
+                            
                             var number_string = angka.replace(/[^,\d]/g, '').toString(),
                                 split    = number_string.split(','),
                                 sisa     = split[0].length % 3,
@@ -282,7 +283,9 @@ class Form extends Model
                             }
                             
                             rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+
                             return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
+
                         }
                     
                     </script>
@@ -422,6 +425,13 @@ class Form extends Model
 
     public static function rowbackitem($table = "", $row = [], $item = "")
     {
+        $row = $row;
+        if (is_string($row) == 1) {
+            $value = $row;
+            $row = [];
+            $row['value'] = $value;
+            $row['row'] = "id";
+        }
         $db = \Config\Database::connect();
         $getData = $db->query("SELECT $item  FROM $table WHERE " . $row["row"] . " = '" . $row["value"] . "' ")->getResultObject();
         if (isset($getData[0])) {

@@ -33,6 +33,24 @@ class BaseController extends Controller
 		return new \App\Models\Form();
 	}
 
+
+	public function ceklogin()
+	{
+		$ss = session();
+
+		$id = $ss->logged_in;
+
+		$db = \Config\Database::connect();
+
+		$data = $db->query("SELECT * FROM users WHERE id = '$id' ")->getResultObject();
+
+		$ss->login = $data[0];
+
+		return $data;
+	}
+
+
+
 	/**
 	 * Constructor.
 	 */

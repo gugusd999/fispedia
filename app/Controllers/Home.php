@@ -59,6 +59,15 @@ class Home extends BaseController
 		return view('front/iklan', $data);
 	}
 
+	public function section()
+	{
+		
+		$ss = session();
+
+		dd($ss->logged_in);
+
+	}
+
 	//--------------------------------------------------------------------
 
 }
