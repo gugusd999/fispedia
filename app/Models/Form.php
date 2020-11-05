@@ -91,7 +91,6 @@ class Form extends Model
         echo '<script type="text/javascript" src="' . base_url() . '/limitless/Layout%204/LTR/assets/js/plugins/editors/summernote/summernote.min.js"></script>';
     }
 
-
     public static function cekdata($data, $nilai)
     {
         if (isset($data[$nilai])) {
